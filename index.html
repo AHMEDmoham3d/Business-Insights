@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Insights Hub - Professional Business Articles & Summaries</title>
+    <meta name="description" content="Your ultimate reference for business articles, summaries, and insights across strategy, marketing, finance, and leadership.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>Business Insights</h1>
+                    <span class="nav-tagline">Professional Business Reference</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#articles" class="nav-link">Articles</a>
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#partnerships" class="nav-link">Create Partnerships</a>
+                    <a href="#about" class="nav-link">About</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Your Ultimate Business Reference</h2>
+                    <p class="hero-subtitle">Discover professional articles, summaries, and insights across all areas of business - from strategy and marketing to finance and leadership.</p>
+                    <div class="hero-search">
+                        <input type="text" id="heroSearch" placeholder="Search articles, topics, or keywords..." class="search-input">
+                        <button class="search-btn" onclick="performSearch()">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="m21 21-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories">
+            <div class="container">
+                <h2 class="section-title">Business Categories</h2>
+                <div class="category-grid">
+                        <!-- <div class="category-card" data-category="strategy"> -->
+                        <!-- <div class="category-icon">🌐 </div> -->
+                        <!-- <h3>Create Strategic Business Partnerships</h3> -->
+                        <!-- <p>Building successful business partnerships is one of the most powerful strategies for growth, innovation, and market expansion. Learn how to identify, develop, and maintain strategic partnerships that drive mutual success.</p> -->
+                    <!-- </div> -->
+                    <div class="category-card" data-category="strategy">
+                        <div class="category-icon">📊</div>
+                        <h3>Business Strategy</h3>
+                        <p>Strategic planning, competitive analysis, and growth frameworks</p>
+                        <span class="article-count">12 articles</span>
+                    </div>
+  
+                    <div class="category-card" data-category="marketing">
+                        <div class="category-icon">📈</div>
+                        <h3>Marketing & Sales</h3>
+                        <p>Digital marketing, customer acquisition, and sales strategies</p>
+                        <span class="article-count">18 articles</span>
+                    </div>
+                    <div class="category-card" data-category="finance">
+                        <div class="category-icon">🌐</div>
+                        <h3>Create Strategic Business Partnerships</h3>
+                        <p>Building successful business partnerships is one of the most powerful strategies for growth, innovation, and market expansion. Learn how to identify, develop, and maintain strategic partnerships that drive mutual success.</p>
+                        <span class="article-count">15 articles</span>
+                    </div>
+                    <div class="category-card" data-category="leadership">
+                        <div class="category-icon">👥</div>
+                        <h3>Leadership & Management</h3>
+                        <p>Team building, organizational behavior, and executive skills</p>
+                        <span class="article-count">14 articles</span>
+                    </div>
+                    <div class="category-card" data-category="technology">
+                        <div class="category-icon">💻</div>
+                        <h3>Technology & Innovation</h3>
+                        <p>Digital transformation, emerging tech, and innovation management</p>
+                        <span class="article-count">10 articles</span>
+                    </div>
+                    <div class="category-card" data-category="operations">
+                        <div class="category-icon">⚙️</div>
+                        <h3>Operations & Efficiency</h3>
+                        <p>Process optimization, supply chain, and operational excellence</p>
+                        <span class="article-count">9 articles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <div class="articles-header">
+                    <h2 class="section-title">Latest Articles</h2>
+                    <div class="filter-controls">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="strategy">Business Strategy</option>
+                            <option value="marketing">Marketing & Sales</option>
+                            <option value="finance">Finance & Investment</option>
+                            <option value="leadership">Leadership & Management</option>
+                            <option value="technology">Technology & Innovation</option>
+                            <option value="operations">Operations & Efficiency</option>
+                            <!-- <option value="Business">Business Partnerships</option> -->
+                        </select>
+                        <select id="sortFilter" class="filter-select">
+                            <option value="newest">Newest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="title">Alphabetical</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="articlesGrid" class="articles-grid">
+                    <!-- Articles will be dynamically loaded here -->
+                </div>
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="btn-secondary">Load More Articles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnerships Section -->
+        <!-- <section id="partnerships" class="partnerships">
+            <div class="container">
+                <h2 class="section-title">Create Strategic Business Partnerships</h2>
+                <div class="partnerships-content">
+                    <div class="partnerships-intro">
+                        <p class="partnerships-subtitle">Building successful business partnerships is one of the most powerful strategies for growth, innovation, and market expansion. Learn how to identify, develop, and maintain strategic partnerships that drive mutual success.</p>
+                    </div>
+                    
+                    <div class="partnerships-grid">
+                        <div class="partnership-type">
+                            <div class="partnership-icon">🤝</div>
+                            <h3>Strategic Alliances</h3>
+                            <p>Long-term partnerships that combine resources and expertise to achieve common goals and enter new markets.</p>
+                        </div>
+                        <div class="partnership-type">
+                            <div class="partnership-icon">🔗</div>
+                            <h3>Channel Partnerships</h3>
+                            <p>Distribution and reseller partnerships that expand your market reach through established networks.</p>
+                        </div>
+                        <div class="partnership-type">
+                            <div class="partnership-icon">💡</div>
+                            <h3>Technology Partnerships</h3>
+                            <p>Collaborations that integrate technologies, platforms, or services to create enhanced value propositions.</p>
+                        </div>
+                        <div class="partnership-type">
+                            <div class="partnership-icon">🎯</div>
+                            <h3>Joint Ventures</h3>
+                            <p>Shared ownership structures for specific projects or market opportunities with defined goals and timelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="partnerships-article">
+                        <div class="article-header">
+                            <h3>The Complete Guide to Building Strategic Business Partnerships</h3>
+                            <div class="article-meta">
+                                <span class="article-category">Strategic Partnerships</span>
+                                <span class="publish-date">January 15, 2025</span>
+                                <span class="read-time">12 min read</span>
+                            </div>
+                        </div>
+                        
+                        <div class="article-content">
+                            <h4>Why Partnerships Matter More Than Ever</h4>
+                            <p>In today's interconnected business landscape, 85% of successful companies attribute at least 20% of their revenue to strategic partnerships. Companies like Microsoft generate over $10 billion annually through their partner ecosystem, while Amazon's marketplace partners contribute to 60% of their total sales volume.</p>
+                            
+                            <h4>The Partnership Development Framework</h4>
+                            
+                            <div class="framework-step">
+                                <h5>1. Strategic Assessment & Goal Setting</h5>
+                                <p><strong>Define Your Partnership Objectives:</strong></p>
+                                <ul>
+                                    <li>Market expansion (geographic or demographic)</li>
+                                    <li>Technology integration and innovation</li>
+                                    <li>Cost reduction through shared resources</li>
+                                    <li>Risk mitigation through diversification</li>
+                                    <li>Access to new customer segments</li>
+                                </ul>
+                                <p><strong>Key Metrics to Track:</strong> Revenue attribution, customer acquisition cost reduction, market penetration rate, time-to-market improvement, and customer satisfaction scores.</p>
+                            </div>
+
+                            <div class="framework-step">
+                                <h5>2. Partner Identification & Evaluation</h5>
+                                <p><strong>Ideal Partner Characteristics:</strong></p>
+                                <ul>
+                                    <li>Complementary strengths and capabilities</li>
+                                    <li>Aligned values and business ethics</li>
+                                    <li>Similar quality standards and customer focus</li>
+                                    <li>Financial stability and growth trajectory</li>
+                                    <li>Compatible organizational culture</li>
+                                </ul>
+                                <p><strong>Due Diligence Process:</strong> Financial health assessment, market reputation analysis, customer satisfaction reviews, legal compliance verification, and cultural fit evaluation.</p>
+                            </div>
+
+                            <div class="framework-step">
+                                <h5>3. Partnership Structure & Legal Framework</h5>
+                                <p><strong>Common Partnership Models:</strong></p>
+                                <ul>
+                                    <li><strong>Referral Partnerships:</strong> 5-15% commission on successful referrals</li>
+                                    <li><strong>Reseller Agreements:</strong> 20-40% margin on product sales</li>
+                                    <li><strong>Technology Integration:</strong> Revenue sharing or licensing fees</li>
+                                    <li><strong>Joint Ventures:</strong> Shared investment and profit distribution</li>
+                                </ul>
+                                <p><strong>Essential Legal Elements:</strong> Clear scope definition, intellectual property rights, revenue sharing mechanisms, performance metrics, termination clauses, and dispute resolution procedures.</p>
+                            </div>
+
+                            <div class="framework-step">
+                                <h5>4. Implementation & Launch Strategy</h5>
+                                <p><strong>90-Day Launch Plan:</strong></p>
+                                <ul>
+                                    <li><strong>Days 1-30:</strong> Team alignment, system integration, and training programs</li>
+                                    <li><strong>Days 31-60:</strong> Pilot program launch with select customers</li>
+                                    <li><strong>Days 61-90:</strong> Full rollout with marketing support and performance monitoring</li>
+                                </ul>
+                                <p><strong>Success Factors:</strong> Dedicated partnership managers, regular communication cadence, shared marketing resources, and joint customer success initiatives.</p>
+                            </div>
+
+                            <div class="framework-step">
+                                <h5>5. Performance Management & Optimization</h5>
+                                <p><strong>Key Performance Indicators:</strong></p>
+                                <ul>
+                                    <li>Partnership Revenue: Target 15-25% year-over-year growth</li>
+                                    <li>Partner Satisfaction Score: Maintain above 8.0/10</li>
+                                    <li>Joint Customer Retention: Aim for 90%+ retention rate</li>
+                                    <li>Time to Value: Reduce customer onboarding time by 30%</li>
+                                </ul>
+                                <p><strong>Continuous Improvement:</strong> Quarterly business reviews, annual strategy sessions, feedback loops, and partnership evolution planning.</p>
+                            </div>
+
+                            <h4>Real-World Success Stories</h4>
+                            <p><strong>Salesforce + AppExchange:</strong> Salesforce's partner ecosystem generates over $6 billion in partner revenue annually, with partners contributing to 85% of Salesforce deals.</p>
+                            <p><strong>Spotify + Uber:</strong> Strategic partnership allowing Uber riders to play their Spotify playlists during rides, resulting in 15% increase in ride satisfaction and 8% increase in Spotify premium subscriptions.</p>
+                            <p><strong>Starbucks + Barnes & Noble:</strong> In-store coffee shops increased Barnes & Noble foot traffic by 25% and extended average customer visit time by 40 minutes.</p>
+
+                            <h4>Common Partnership Pitfalls to Avoid</h4>
+                            <ul>
+                                <li><strong>Misaligned Expectations:</strong> 60% of partnerships fail due to unclear goals and expectations</li>
+                                <li><strong>Poor Communication:</strong> Establish weekly check-ins and monthly strategic reviews</li>
+                                <li><strong>Inadequate Legal Framework:</strong> Invest in comprehensive partnership agreements</li>
+                                <li><strong>Cultural Mismatch:</strong> Conduct thorough cultural assessment before commitment</li>
+                                <li><strong>Lack of Dedicated Resources:</strong> Assign full-time partnership managers for strategic alliances</li>
+                            </ul>
+
+                            <h4>Partnership ROI Calculator</h4>
+                            <p><strong>Formula:</strong> (Partnership Revenue - Partnership Costs) / Partnership Costs × 100</p>
+                            <p><strong>Industry Benchmarks:</strong></p>
+                            <ul>
+                                <li>Technology partnerships: 300-500% ROI</li>
+                                <li>Channel partnerships: 200-400% ROI</li>
+                                <li>Strategic alliances: 150-300% ROI</li>
+                            </ul>
+
+                            <h4>Next Steps: Building Your Partnership Strategy</h4>
+                            <ol>
+                                <li>Complete a partnership readiness assessment</li>
+                                <li>Identify 3-5 potential strategic partners</li>
+                                <li>Develop partnership value propositions</li>
+                                <li>Create partnership evaluation criteria</li>
+                                <li>Design partnership management processes</li>
+                                <li>Launch pilot partnership program</li>
+                            </ol>
+
+                            <div class="call-to-action">
+                                <h4>Ready to Build Strategic Partnerships?</h4>
+                                <p>Strategic partnerships can accelerate your business growth by 2-5x when executed properly. Start by identifying complementary businesses in your industry and reach out with a clear value proposition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About Business Insights </h2>
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p>Business Insights Hub is your comprehensive reference for professional business knowledge. We curate and summarize the most important business concepts, strategies, and insights to help professionals at all levels excel in their careers.</p>
+                            <p>Our content covers everything from fundamental business principles to cutting-edge industry trends, providing you with the knowledge you need to make informed decisions and drive success.</p>
+                            <div class="about-stats">
+                                <div class="stat">
+                                    <h3>78+</h3>
+                                    <p>Articles</p>
+                                </div>
+                                <div class="stat">
+                                    <h3>6</h3>
+                                    <p>Categories</p>
+                                </div>
+                                <div class="stat">
+                                    <h3>10k+</h3>
+                                    <p>Readers</p>
+                                </div>
+                                <div class="stat">
+                                    <h3>Weekly</h3>
+                                    <p>Updates</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-image">
+                            <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Business professionals collaborating" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Business Insights Hub</h3>
+                    <p>Your trusted source for professional business knowledge and insights.</p>
+                    <!-- <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Facebook">📘</a>
+                    </div> -->
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('strategy')">Business Strategy</a></li>
+                        <li><a href="#" onclick="filterByCategory('marketing')">Marketing & Sales</a></li>
+                        <li><a href="#" onclick="filterByCategory('finance')">Finance & Investment</a></li>
+                        <li><a href="#" onclick="filterByCategory('leadership')">Leadership</a></li>
+                        <li><a href="#partnerships">Create Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">All Articles</a></li>
+                        <li><a href="#">Latest Updates</a></li>
+                        <li><a href="#">Popular Content</a></li>
+                        <li><a href="#">Business Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@businessinsightshub.com">info@businessinsights.com</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Business Insights . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Article Modal -->
+    <div id="articleModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeArticleModal()">&times;</button>
+            <div id="modalContent">
+                <!-- Article content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/articles-data.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
