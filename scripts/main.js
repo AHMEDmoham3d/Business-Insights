@@ -275,7 +275,7 @@ class BusinessInsightsHub {
         const categoryNames = {
             'strategy': 'Business Strategy',
             'marketing': 'Marketing & Sales',
-            'finance': 'Finance & Investment',
+            'finance': 'Business Strategy',
             'leadership': 'Leadership & Management',
             'technology': 'Technology & Innovation',
             'operations': 'Operations & Efficiency'
