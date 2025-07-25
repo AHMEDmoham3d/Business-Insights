@@ -130,7 +130,7 @@ const articlesData = [
 
     <h2>Conclusion</h2>
     <p>In conclusion, the journey of entrepreneurship today is deeply intertwined with understanding and applying IT. This technology has turned challenges into opportunities, opened the doors to countless innovations, and provided entrepreneurs with the tools they need to build successful, sustainable businesses that make a real difference in the world. Every entrepreneur must embrace this transformation and invest in understanding and using technology to secure their place in the future.</p>
-    <br>
+    <br><hr><br>
       <h1 style="color: #005b9f;">Mindset: The Key to Entrepreneurial Success</h1>
 
   <p>
