@@ -437,3 +437,10 @@ window.addEventListener('hashchange', () => {
         window.businessHub.scrollToSection(hash);
     }
 });
+window.addEventListener("DOMContentLoaded", () => {
+  const animatedSections = document.querySelectorAll(".animate-fade");
+  animatedSections.forEach((el, index) => {
+    // تأخير بسيط بين كل عنصر والتاني
+    el.style.animationDelay = `${index * 0.3}s`;
+  });
+});
