@@ -208,13 +208,13 @@ const articlesData = [
   <p><em>Change your mindset, and everything else will follow.</em></p>
   <br><hr><br>
   <div>
-  <h2 style="color: blue;">How to Find the Right Mentor in Entrepreneurship?</h2>
+  <h2 style="color: #007acc;">How to Find the Right Mentor in Entrepreneurship?</h2>
 
-  <h3 style="color: blue;">🚀 Introduction</h3>
+  <h3 style="color: #007acc;"> Introduction</h3>
   <p>At the beginning of any entrepreneurial journey, the entrepreneur is often thirsty for knowledge. He’s not the richest or the smartest on paper, but he’s the one who seeks information, teaches himself, and truly wants to succeed.</p>
   <p>Poverty is not a flaw — it’s just a stage. Just like people grow year by year, the same applies to wealth and knowledge. A smart entrepreneur doesn’t judge himself by how much money he currently has, but by where he’s going and what steps he’s taking to get there.</p>
 
-  <h3 style="color: blue;">💡 1. Why Do I Need a Mentor?</h3>
+  <h3 style="color: #007acc;"> 1. Why Do I Need a Mentor?</h3>
   <p>A mentor is someone who has been through real-world business experiences — they’ve failed, succeeded, and learned from real life, not from books.</p>
   <p><strong>The difference between a mentor and a teacher:</strong></p>
   <ul>
@@ -223,11 +223,11 @@ const articlesData = [
   </ul>
   <p>A mentor doesn’t teach you “a subject” — he teaches you life. He doesn’t just say “Do this,” he explains why you should do it and what might happen if you don’t.</p>
 
-  <h3 style="color: blue;">🧭 2. Why Should I Listen Even If I Don’t Agree?</h3>
+  <h3 style="color: #007acc;"> 2. Why Should I Listen Even If I Don’t Agree?</h3>
   <p>Sometimes your mentor will tell you to do something that you completely disagree with. But he’s not speaking randomly — he’s speaking from years of experience and lessons learned.</p>
   <p><strong>A simple example:</strong> If he says “Don’t handle your project this way,” and you think it’s a genius method — ask him why. He might say, “I tried it in 2015 and lost money because of it.” At that point, you need to pause and reflect.</p>
 
-  <h3 style="color: blue;">🎯 3. A Mentor Doesn’t Give General Rules — But Personalized Solutions</h3>
+  <h3 style="color: #007acc;"> 3. A Mentor Doesn’t Give General Rules — But Personalized Solutions</h3>
   <p>A real mentor won’t give you the same advice he gives to everyone else.</p>
   <ul>
     <li>He won’t just say, “Run Facebook ads,” because that’s popular.</li>
@@ -235,7 +235,7 @@ const articlesData = [
   </ul>
   <p>A mentor speaks about you, your case, and your path — not just theory or general advice.</p>
 
-  <h3 style="color: blue;">🔍 4. How to Choose a Mentor?</h3>
+  <h3 style="#007acc: blue;"> 4. How to Choose a Mentor?</h3>
   <p>Not every successful person qualifies as a good mentor.</p>
   <ul>
     <li>Some may be very successful, but they don’t like to help or can’t explain clearly.</li>
@@ -249,12 +249,12 @@ const articlesData = [
     <li>Do I trust his intentions?</li>
   </ul>
 
-  <h3 style="color: blue;">🧠 5. How to Benefit from Someone with Experience?</h3>
+  <h3 style="color: #007acc;"> 5. How to Benefit from Someone with Experience?</h3>
   <p>If you meet someone successful, don’t just say, “Help me,” and stop there.</p>
   <p>Say something like: “I need advice on a specific point, and I’m willing to offer you a service or pay you for your time.”</p>
   <p>A mentor isn’t required to volunteer — you are the one who should offer first.</p>
 
-  <h3 style="color: blue;">🔄 6. Where Can I Find a Mentor?</h3>
+  <h3 style="color: #007acc;"> 6. Where Can I Find a Mentor?</h3>
   <p>If you don’t currently have a mentor, don’t wait — take action:</p>
   <ul>
     <li><strong>Start with your personal circle:</strong> Sometimes someone close to you — a friend or family member — has valuable experience, but you’ve never asked.</li>
@@ -264,7 +264,7 @@ const articlesData = [
     <li><strong>If you can’t find someone:</strong> Use tools like AI (ChatGPT) or online resources to help you, but always aim to find a real human mentor who understands your specific case.</li>
   </ul>
 
-  <h3 style="color: blue;">🛠️ 7. Important Point: Don’t Be Shy to Ask</h3>
+  <h3 style="color: #007acc;"> 7. Important Point: Don’t Be Shy to Ask</h3>
   <p>As an entrepreneur, you need to be bold and not feel embarrassed.</p>
   <p>If you see someone you can benefit from — go to them.</p>
   <p>But always remember:</p>
@@ -274,7 +274,7 @@ const articlesData = [
     <li>Make it clear you’re seeking a learning opportunity — not a handout.</li>
   </ul>
 
-  <h3 style="color: blue;">🏁 Conclusion</h3>
+  <h3 style="#007acc: blue;"> Conclusion</h3>
   <p>The road to entrepreneurship is not easy — but others have walked it before and learned from falling.</p>
   <p>If you can reach one of them and learn from them, you can save yourself years of failure and struggle.</p>
   <p>As a real entrepreneur, you should never see poverty as an obstacle — just a stage to pass through.</p>
